@@ -1,0 +1,20 @@
+[versions]
+# plugins
+kotlinJVM       = "2.0.0"
+kotlinSerial    = "2.0.0"
+neoForgedMDK    = "1.0.11"
+
+# libraries
+kotlinForForge  = "5.5.0"       # Kotlin for Forge 5.5.0
+jei             = "19.25.0.323" # Just Enough Items 19.25.0.323
+
+[libraries]
+kotlinForForge  = { group = "thedarkcolour",            name = "kotlinforforge-neoforge",      version.ref = "kotlinForForge" }
+jeiBaseAPI      = { group = "mezz.jei",                 name = "jei-1.21.1-common-api",        version.ref = "jei"            }
+jeiNeoforgedAPI = { group = "mezz.jei",                 name = "jei-1.21.1-neoforge-api",      version.ref = "jei"            }
+jei             = { group = "mezz.jei",                 name = "jei-1.21.1-neoforge",          version.ref = "jei"            }
+
+[plugins]
+kotlinJVM       = { id = "org.jetbrains.kotlin.jvm",                                           version.ref = "kotlinJVM"      }
+kotlinSerial    = { id = "org.jetbrains.kotlin.plugin.serialization",                          version.ref = "kotlinSerial"   }
+neoForgedMDK    = { id = "net.neoforged.moddev",                                               version.ref = "neoForgedMDK"   }
