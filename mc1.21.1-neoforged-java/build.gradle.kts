@@ -104,21 +104,6 @@ dependencies {
     // Kotlin for Forge 5.5.0
     implementation(libs.kotlinForForge)
 
-    // Registrate 1.3.0+67
-    implementation(libs.registrate)
-
-    // Ponder 1.0.63
-    implementation(libs.ponder)
-
-    // Create 6.0.8
-    implementation(variantOf(libs.createMod) { classifier("slim") }) {
-        isTransitive = false
-    }
-
-    // Flywheel 1.0.2
-    compileOnly(libs.flywheelAPI)
-    runtimeOnly(libs.flywheel)
-
     // JEI 19.25.0.323
     compileOnly(libs.jeiBaseAPI)
     compileOnly(libs.jeiNeoforgedAPI)
