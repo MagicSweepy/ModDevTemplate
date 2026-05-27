@@ -1,0 +1,22 @@
+[versions]
+modDevKit       = "1.0.11"
+
+scala           = "2.13.16"
+scala3          = "3.7.1"
+cats            = "2.13.0-kotori"
+
+scalableCats    = "3.7.1-build-11"  # Scalable Cats Force 3.7.1-build-11
+jei             = "19.25.0.323"     # Just Enough Items   19.25.0.323
+
+[libraries]
+scala           = { group = "org.scala-lang",           name = "scala-library",                version.ref = "scala"          }
+scala3          = { group = "org.scala-lang",           name = "scala3-library_3",             version.ref = "scala3"         }
+cats            = { group = "org.typelevel",            name = "cats-core_3",                  version.ref = "cats"           }
+
+scalableCats    = { group = "com.kotori316",            name = "scalablecatsforce-neoforge",   version.ref = "scalableCats"   }
+jeiBaseAPI      = { group = "mezz.jei",                 name = "jei-1.21.1-common-api",        version.ref = "jei"            }
+jeiNeoforgedAPI = { group = "mezz.jei",                 name = "jei-1.21.1-neoforge-api",      version.ref = "jei"            }
+jei             = { group = "mezz.jei",                 name = "jei-1.21.1-neoforge",          version.ref = "jei"            }
+
+[plugins]
+modDevKit       = { id    = "net.neoforged.moddev",     version.ref = "modDevKit"                                             }
