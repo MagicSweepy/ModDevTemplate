@@ -22,6 +22,15 @@ val Project.generateTokenPath: String by StringDelegate()
 
 // endregion
 
+// region Shadow Config
+
+val Project.useShadowDeps: String by StringDelegate()
+val Project.minimizeShadowedDependencies: String by StringDelegate()
+val Project.relocateShadowedDependencies: String by StringDelegate()
+val Project.shadowRelocationPrefix: String by StringDelegate()
+
+// endregion
+
 class StringDelegate {
 
     operator fun getValue(thisRef: Project, property: KProperty<*>): String =

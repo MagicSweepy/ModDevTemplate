@@ -1,5 +1,6 @@
 plugins {
     id("java-toolchain")
+    id("shadow")
     id("minecraft")
     id("ide")
     id("repositories")
@@ -13,6 +14,8 @@ dependencies {
 
     implementation(deobf.of(libs.jei))
     implementation(deobf.of(libs.theOneProbe))
+
+    shadowImplementation("org.jheaps:jheaps:0.14")
 }
 
 configurations {

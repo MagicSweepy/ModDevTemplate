@@ -2,6 +2,7 @@ import com.gtnewhorizons.retrofuturagradle.mcp.DeobfuscateTask
 import com.gtnewhorizons.retrofuturagradle.mcp.ReobfuscatedJar
 import com.gtnewhorizons.retrofuturagradle.minecraft.RunMinecraftTask
 import extensions.DeobfExtension
+import org.gradle.api.tasks.bundling.AbstractArchiveTask
 import utils.*
 import xyz.wagyourtail.jvmdg.gradle.task.DowngradeJar
 import xyz.wagyourtail.jvmdg.gradle.task.ShadeJar
@@ -92,6 +93,11 @@ tasks.reobfJar {
 
 val downgradeJar by tasks.getting(DowngradeJar::class) {
     archiveClassifier = "shim"
+    if (useShadowDeps.toBoolean()) {
+        dependsOn("shadowJar")
+        val shadowJarProvider = tasks.named("shadowJar")
+        inputFile = shadowJarProvider.flatMap { (it as AbstractArchiveTask).archiveFile }
+    }
 }
 
 tasks.named<ShadeJar>("shadeDowngradedApi") {

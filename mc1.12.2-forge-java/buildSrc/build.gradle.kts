@@ -19,4 +19,5 @@ dependencies {
     implementation(libs.retrofuturaGradle)
     implementation(libs.jvmDowngrader)
     implementation(libs.ideaExt)
+    implementation(libs.shadow)
 }

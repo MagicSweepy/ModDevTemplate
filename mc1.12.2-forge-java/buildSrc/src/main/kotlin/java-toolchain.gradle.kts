@@ -41,3 +41,16 @@ configurations {
         extendsFrom(localRuntime)
     }
 }
+
+val shadowDowngrade: Configuration by configurations.creating {
+    isCanBeConsumed = false
+    isCanBeResolved = true
+}
+
+configurations.compileOnly {
+    extendsFrom(shadowDowngrade)
+}
+
+jvmdg.apply {
+    dg(shadowDowngrade)
+}
