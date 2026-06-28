@@ -14,8 +14,6 @@ dependencies {
 
     implementation(deobf.of(libs.jei))
     implementation(deobf.of(libs.theOneProbe))
-
-    shadowImplementation("org.jheaps:jheaps:0.14")
 }
 
 configurations {
